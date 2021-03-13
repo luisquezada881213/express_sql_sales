@@ -8,8 +8,8 @@ function executeQuery(query) {
     database: 'sales',
   });
   return new Promise((resolve) => {
-    connection.connect((err) => {
-      if (err) {
+    connection.connect((error) => {
+      if (error) {
         resolve({ error: true });
       } else {
         connection.query(query, (error, rows, _fields) => {
