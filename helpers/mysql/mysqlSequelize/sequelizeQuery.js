@@ -1,22 +1,12 @@
 var Sequelize = require("sequelize");
 
-const countries = () => {
+const find = (model, attributes) => {
   return new Promise((resolve) => {
     var sequelize = new Sequelize("mysql://root:password@127.0.0.1:3306/sales");
 
-    var Sales = sequelize.define("sales", {
-      Country: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        primaryKey: true,
-      },
-    });
+    var Sales = sequelize.define("sales", model);
 
-    Sales.findAll({
-      attributes: [
-        [Sequelize.fn("DISTINCT", Sequelize.col("Country")), "Country"],
-      ],
-    })
+    Sales.findAll(attributes)
       .then(async (sales) => {
         const result = sales.map((e) => e.dataValues);
         resolve({ data: result });
@@ -28,7 +18,3 @@ const countries = () => {
       });
   });
 };
-
-countries().then((response) => {
-  console.log(response);
-});
