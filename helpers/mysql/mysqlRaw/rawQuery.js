@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-function executeQuery(query) {
+function query(query) {
   const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
@@ -28,4 +28,4 @@ function executeQuery(query) {
   });
 }
 
-module.exports = executeQuery;
+module.exports = query;

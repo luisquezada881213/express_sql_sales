@@ -18,3 +18,5 @@ const find = (model, attributes) => {
       });
   });
 };
+
+module.exports = find;
