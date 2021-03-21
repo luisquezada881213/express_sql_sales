@@ -19,7 +19,7 @@ exports.totals_by_region = (region) => {
 };
 
 exports.item_type_by_country = (country) => {
-  return `SELECT Item_Type, SUM(Units_Sold) as 'Units Sold', SUM(Total_Cost) as 'Total Cost', SUM(Total_Revenue) as 'Total Revenue', SUM(Total_Profit) as 'Total Profit' FROM sales WHERE Country = '${country}' GROUP BY Item_Type`;
+  return `SELECT Item_Type as 'Item Type', SUM(Units_Sold) as 'Units Sold', SUM(Total_Cost) as 'Total Cost', SUM(Total_Revenue) as 'Total Revenue', SUM(Total_Profit) as 'Total Profit' FROM sales WHERE Country = '${country}' GROUP BY Item_Type`;
 };
 
 exports.item_type_by_region = (region) => {
