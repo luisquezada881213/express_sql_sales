@@ -192,11 +192,11 @@ exports.item_type_by_region = (region) => {
 
     attributes: {
       attributes: [
-        "Item_Type",
-        [Sequelize.fn("SUM", Sequelize.col("Units_Sold")), "Units_Sold"],
-        [Sequelize.fn("SUM", Sequelize.col("Total_Cost")), "Total_Cost"],
-        [Sequelize.fn("SUM", Sequelize.col("Total_Revenue")), "Total_Revenue"],
-        [Sequelize.fn("SUM", Sequelize.col("Total_Profit")), "Total_Profit"],
+        ["Item_Type", "Item Type"],
+        [Sequelize.fn("SUM", Sequelize.col("Units_Sold")), "Units Sold"],
+        [Sequelize.fn("SUM", Sequelize.col("Total_Cost")), "Total Cost"],
+        [Sequelize.fn("SUM", Sequelize.col("Total_Revenue")), "Total Revenue"],
+        [Sequelize.fn("SUM", Sequelize.col("Total_Profit")), "Total Profit"],
       ],
       group: ["Item_Type"],
       where: { Region: region },

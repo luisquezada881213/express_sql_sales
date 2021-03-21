@@ -2,7 +2,13 @@ var Sequelize = require("sequelize");
 
 const find = (model, attributes) => {
   return new Promise((resolve) => {
-    var sequelize = new Sequelize("mysql://root:password@127.0.0.1:3306/sales");
+    const sequelize = new Sequelize('sales', 'root', 'password', {
+      dialect: 'mysql',
+      dialectOptions: {
+        supportBigNumbers: true,
+        decimalNumbers: true
+      }
+    })
 
     var Sales = sequelize.define("sales", model);
 
@@ -13,6 +19,7 @@ const find = (model, attributes) => {
         await sequelize.close();
       })
       .catch(async (error) => {
+        console.log(error)
         resolve({ error: true });
         await sequelize.close();
       });
