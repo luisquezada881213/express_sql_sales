@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var query = require('../helpers/mysql/query');
+var query = require('../helpers/mysql/mysqlRaw/rawQuery');
 var getResultStatus = require('../helpers/getResultStatus');
 var resultsDataToArray = require('../helpers/resultsDataToArray');
-var getQuery = require('../helpers/mysql/getQuery');
+var getQuery = require('../helpers/mysql/mysqlRaw/getQuery');
 
 router.get('/', function(req, res, next) {
   res.send('This is mysql raw router')
