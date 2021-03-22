@@ -9,6 +9,6 @@ const getResultStatus = (result) => {
         return 204;
     }
     return 500;
-}
+};
 
 module.exports = getResultStatus;
