@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-function query(query) {
+const query = (query) => {
   const connection = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',

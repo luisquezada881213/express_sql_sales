@@ -1,4 +1,4 @@
-function getResultStatus(result){
+const getResultStatus = (result) => {
     if (result.error) {
         return 500;
     }
