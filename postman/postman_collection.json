@@ -1,0 +1,322 @@
+{
+	"info": {
+		"name": "Express sales server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mysql Raw GET countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/countries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Raw GET regions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/regions",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"regions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Raw GET item types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/item_types",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"item_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Raw GET totals by country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/totals_by_country?country=Mexico",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"totals_by_country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Mexico"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Raw GET totals by region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/totals_by_region?region=Asia",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"totals_by_region"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Asia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Raw GET item type by country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/item_type_by_country?country=United+States+Of+America",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"item_type_by_country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "United+States+Of+America"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Raw GET item type by region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlRaw/item_type_by_region?region=Asia",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlRaw",
+						"item_type_by_region"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Asia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/countries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET regions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/regions",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"regions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET item types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/item_types",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"item_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET totals by country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/totals_by_country?country=Mexico",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"totals_by_country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Mexico"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET totals by region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/totals_by_region?region=Europe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"totals_by_region"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Europe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET item type by country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/item_type_by_country?country=United+States+Of+America",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"item_type_by_country"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "United+States+Of+America"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mysql Sequelize GET item type by country Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mysqlSequelize/item_type_by_region?region=Asia",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mysqlSequelize",
+						"item_type_by_region"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Asia"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
