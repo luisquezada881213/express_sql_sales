@@ -1,4 +1,5 @@
 const mysql = require("mysql");
+const logger = require("../../logger");
 
 const query = (query) => {
     const connection = mysql.createConnection({
@@ -10,6 +11,7 @@ const query = (query) => {
     return new Promise((resolve) => {
         connection.connect((error) => {
             if (error) {
+                logger.eventEmitter.emit("error", JSON.stringify(error));
                 resolve({ error: true });
             } else {
                 connection.query(query, (error, rows, _fields) => {
@@ -19,6 +21,7 @@ const query = (query) => {
                             data: result
                         });
                     } else {
+                        logger.eventEmitter.emit("error", JSON.stringify(error));
                         resolve({ error: true });
                     }
                 });

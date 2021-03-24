@@ -1,4 +1,5 @@
 var Sequelize = require("sequelize");
+const logger = require("../../logger");
 
 const find = (model, attributes) => {
     return new Promise((resolve) => {
@@ -20,7 +21,8 @@ const find = (model, attributes) => {
                 resolve({ data: result });
                 await sequelize.close();
             })
-            .catch(async (_error) => {
+            .catch(async (error) => {
+                logger.eventEmitter.emit("error", JSON.stringify(error));
                 resolve({ error: true });
                 await sequelize.close();
             });
